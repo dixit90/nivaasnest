@@ -1,15 +1,16 @@
 'use client';
 
-import {  Reservation } from "@prisma/client";
-import {SafeListing, SafeReservation, SafeUser} from "@/app/types";
+import { Reservation } from "@prisma/client";
+import { SafeListing, SafeReservation, SafeUser } from "@/app/types";
 import { useRouter } from "next/navigation";
-import { format } from  "date-fns"
+import { format } from "date-fns"
 import React, { useCallback, useMemo } from "react";
 
 import useCountries from "@/app/hooks/useCountries";
 import Image from "next/image";
 import HeartButton from "@/app/components/HeartButton";
 import Button from "@/app/components/Button";
+import { FaVrCardboard } from "react-icons/fa6";
 
 interface ListingCardProps {
     data: SafeListing;
@@ -78,7 +79,19 @@ const ListingCard = ({
                         alt="Listing"
                         className="object-cover w-full h-full group-hover:scale-110 transition"
                     />
-                    <div className="absolute top-3 right-3">
+                    <div className="absolute top-3 right-3 flex flex-row gap-2">
+                        <div 
+                            onClick={(e) => {
+                                e.stopPropagation();
+                                // Your VR toggle function here
+                            }}
+                            className="relative hover:opacity-80 transition cursor-pointer bg-white rounded-full p-1.5"
+                        >
+                            <FaVrCardboard 
+                                size={18} 
+                                className="text-neutral-700"
+                            />
+                        </div>
                         <HeartButton
                             listingId={data.id}
                             currentUser={currentUser}
