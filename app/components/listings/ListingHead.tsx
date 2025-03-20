@@ -29,7 +29,7 @@ const ListingHead = ({
         <>
             <Heading
                 title={title}
-                subtitle={`${location?.region}, ${location?.label}`}
+                subTitle={`${location?.region}, ${location?.label}`}
             />
             <div
                 className="w-full h-[60vh] overflow-hidden rounded-xl relative"
