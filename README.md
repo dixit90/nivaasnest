@@ -1,6 +1,6 @@
 # Full Stack Home Rentals with Next.js 13 App Router: React, Tailwind, Prisma, MongoDB, NextAuth 2023
 
-This application is an Airbnb clone made in Next.js 13 App Router: React, Tailwind, Prisma, MongoDB, NextAuth 2023
+This application is an home rentals website made in Next.js 13 App Router: React, Tailwind, Prisma, MongoDB, NextAuth 2023
 
 Features:
 
